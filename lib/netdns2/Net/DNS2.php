@@ -918,10 +918,10 @@ class Net_DNS2
         while (1) {
 
             //
-            // grab the next DNS server
+            // grab the next DNS server (replacement for deprecated/removed each())
             //
-            $ns = each($this->nameservers);
-            if ($ns === false) {
+            $key = key($this->nameservers);
+            if ($key === null) {
 
                 if (is_null($this->last_exception) == false) {
 
@@ -935,7 +935,8 @@ class Net_DNS2
                 }
             }
 
-            $ns = $ns[1];
+            $ns = $this->nameservers[$key];
+            next($this->nameservers);
 
             //
             // if the use TCP flag (force TCP) is set, or the packet is bigger than our 

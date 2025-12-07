@@ -50,7 +50,7 @@ if (isset($_POST['update']) or isset($_POST['add']) or isset($_POST['purge'])) {
 }
 
 Html::header(
-    PluginDnsinventoryServer::getTypeName(Session::getPluralNumber()), $_SERVER['PHP_SELF'], "config", "PluginDnsinventoryServer"
+    PluginDnsinventoryServer::getTypeName(Session::getPluralNumber())
 );
 
 $server->display(array('id' => $_GET["id"]));

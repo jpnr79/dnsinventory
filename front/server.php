@@ -24,7 +24,7 @@ include ("../../../inc/includes.php");
 
 Session::checkRight("config", UPDATE);
 
-Html::header(PluginDnsinventoryServer::getTypeName(Session::getPluralNumber()), $_SERVER['PHP_SELF'], 'config', 'PluginDnsinventoryServer');
+Html::header(PluginDnsinventoryServer::getTypeName(Session::getPluralNumber()));
 
 Search::show('PluginDnsinventoryServer');
 

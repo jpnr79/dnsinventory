@@ -70,12 +70,12 @@ class PluginDnsinventoryServer extends CommonDBTM {
         echo Html::hidden("id", array('value' => $this->fields['id']));
 
         echo __('Name') . "</td><td colspan='2'>";
-        echo Html::input("name", array('value' => $this->fields['name']));
+        echo Html::input("text", "name", array('value' => $this->fields['name']));
 
         echo "</td></tr><tr><td colspan='2'>";
 
-        echo __('Address', 'dhcpinventory') . "</td><td colspan='2'>";
-        echo Html::input("address", array('value' => $this->fields['address']));
+        echo __('Address', 'dnsinventory') . "</td><td colspan='2'>";
+        echo Html::input("text", "address", array('value' => $this->fields['address']));
 
         echo "</td></tr>";
 

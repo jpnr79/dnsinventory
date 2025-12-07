@@ -34,7 +34,7 @@ function plugin_dnsinventory_install() {
     global $DB;
 
     // todo: añadir TSIG or SIG como método de autenticación con el servidor
-    if (!TableExists("glpi_plugin_dnsinventory_servers")) {
+    if (!$DB->tableExists("glpi_plugin_dnsinventory_servers")) {
         $DB->runFile(GLPI_ROOT . "/plugins/dnsinventory/sql/1.0.0.sql");
     }
 

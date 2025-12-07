@@ -48,11 +48,11 @@ function plugin_init_dnsinventory() {
  */
 function plugin_version_dnsinventory() {
     return array('name' => __('DNS Inventory', 'dnsinventory'),
-        'version' => '1.1.0',
+        'version' => '1.2.0',
         'author' => 'Javier Samaniego',
         'license' => 'AGPLv3+',
         'homepage' => 'https://github.com/jsamaniegog/dnsinventory',
-        'minGlpiVersion' => '0.90');
+        'minGlpiVersion' => '11.0');
 }
 
 /**
@@ -60,8 +60,8 @@ function plugin_version_dnsinventory() {
  * @return boolean
  */
 function plugin_dnsinventory_check_prerequisites() {
-    if (version_compare(GLPI_VERSION, '0.90', 'lt')) {
-        echo __('This plugin requires GLPI >= 0.90', 'dnsinventory');
+    if (version_compare(GLPI_VERSION, '11.0', 'lt')) {
+        echo __('This plugin requires GLPI >= 11.0', 'dnsinventory');
         return false;
     }
 

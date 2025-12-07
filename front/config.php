@@ -22,7 +22,7 @@ Session::checkRight("config", UPDATE);
 // To be available when plugin in not activated
 //Plugin::load('dnsinventory');
 
-Html::header("DNS Inventory",$_SERVER['PHP_SELF'],"config","plugins");
+Html::header(__('DNS Inventory', 'dnsinventory'));
 
 $config = new PluginDnsinventoryConfig();
 

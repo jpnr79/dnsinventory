@@ -21,7 +21,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include(GLPI_ROOT . '/plugins/dhcpinventory/lib/netdns2/Net/DNS2.php');
+include(GLPI_ROOT . '/plugins/dnsinventory/lib/netdns2/Net/DNS2.php');
 
 /**
  * Extends DNS library Net_DNS2.

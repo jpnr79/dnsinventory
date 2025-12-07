@@ -15,17 +15,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 CREATE TABLE `glpi_plugin_dnsinventory_configs` (
-        `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
         `type` varchar(32) NOT NULL default '' UNIQUE,
         `value` varchar(32) NOT NULL default ''
-)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 INSERT INTO `glpi_plugin_dnsinventory_configs`(type, value) VALUES ('current_record_task_limit', '0');
 
 CREATE TABLE `glpi_plugin_dnsinventory_servers` (
-        `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
         `name` varchar(32) NOT NULL default '' UNIQUE,
-        `entities_id` int(11) NOT NULL default 0, 
+        `entities_id` int(11) UNSIGNED NOT NULL default 0, 
         `is_recursive` tinyint(1) NOT NULL default 0,
         `address` varchar(32) NOT NULL default ''
-)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

@@ -36,6 +36,9 @@ function plugin_dnsinventory_install() {
     // todo: añadir TSIG or SIG como método de autenticación con el servidor
     if (!$DB->tableExists("glpi_plugin_dnsinventory_servers")) {
         $DB->runFile(GLPI_ROOT . "/plugins/dnsinventory/sql/1.0.0.sql");
+    } else {
+        // Run migration for GLPI 11 compatibility (upgrade existing tables)
+        $DB->runFile(GLPI_ROOT . "/plugins/dnsinventory/sql/1.2.0.sql");
     }
 
     // register a cron for task execution

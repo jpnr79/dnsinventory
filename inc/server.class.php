@@ -47,10 +47,11 @@ class PluginDnsinventoryServer extends CommonDBTM {
     /**
      * Show DNS server form to add or edit.
      * @global type $DB
-     * @param type $options
+     * @param int $ID
+     * @param array $options
      * @return boolean
      */
-    function showForm($options) {
+    function showForm($ID, array $options = []) {
         global $DB;
 
         if (!Session::haveRight("config", UPDATE)) {
@@ -58,7 +59,7 @@ class PluginDnsinventoryServer extends CommonDBTM {
         }
 
         // get server data
-        $this->getFromDB($options['id']);
+        $this->getFromDB($ID);
 
         $this->showFormHeader($options);
 

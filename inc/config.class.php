@@ -41,7 +41,7 @@ class PluginDnsinventoryConfig extends CommonDBTM {
         return '';
     }
 
-    function showForm() {
+    function showForm($ID, array $options = []) {
         global $CFG_GLPI;
         if (!Session::haveRight("config", UPDATE)) {
             return false;
@@ -67,7 +67,7 @@ class PluginDnsinventoryConfig extends CommonDBTM {
     static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0) {
         if ($item->getType() == 'Config') {
             $config = new self();
-            $config->showForm();
+            $config->showForm(0, []);
         }
     }
 }

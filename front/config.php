@@ -26,7 +26,7 @@ Html::header(__('DNS Inventory', 'dnsinventory'));
 
 $config = new PluginDnsinventoryConfig();
 
-$config->showForm();
+$config->showForm(0, []);
 
 Html::footer();
 ?>

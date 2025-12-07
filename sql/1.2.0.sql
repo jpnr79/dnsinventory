@@ -25,7 +25,7 @@ ALTER TABLE `glpi_plugin_dnsinventory_configs`
 
 /* Alter servers table to use unsigned integers and utf8mb4 */
 ALTER TABLE `glpi_plugin_dnsinventory_servers`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  MODIFY `entities_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  MODIFY `id` int unsigned NOT NULL AUTO_INCREMENT,
+  MODIFY `entities_id` int unsigned NOT NULL DEFAULT 0,
   CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   ENGINE=InnoDB;

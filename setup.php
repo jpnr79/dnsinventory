@@ -52,7 +52,7 @@ function plugin_version_dnsinventory() {
         'author' => 'Javier Samaniego',
         'license' => 'AGPLv3+',
         'homepage' => 'https://github.com/jsamaniegog/dnsinventory',
-        'minGlpiVersion' => '11.0');
+        'requirements' => ['glpi' => ['min' => '11.0', 'max' => '12.0']]);
 }
 
 /**

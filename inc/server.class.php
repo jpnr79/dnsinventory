@@ -58,8 +58,12 @@ class PluginDnsinventoryServer extends CommonDBTM {
             return false;
         }
 
-        // get server data
-        $this->getFromDB($ID);
+        // get server data or prepare for new entry
+        if ($ID > 0) {
+            $this->getFromDB($ID);
+        } else {
+            $this->getEmpty();
+        }
 
         $this->showFormHeader($options);
 
@@ -68,15 +72,15 @@ class PluginDnsinventoryServer extends CommonDBTM {
         echo "<tr><td colspan='2'>";
 
         // hidden id
-        echo Html::hidden("id", array('value' => $this->fields['id']));
+        echo Html::hidden("id", array('value' => $this->fields['id'] ?? 0));
 
         echo __('Name') . "</td><td colspan='2'>";
-        echo Html::input("text", "name", array('value' => $this->fields['name']));
+        echo Html::input("text", "name", array('value' => $this->fields['name'] ?? '', 'required' => true));
 
         echo "</td></tr><tr><td colspan='2'>";
 
         echo __('Address', 'dnsinventory') . "</td><td colspan='2'>";
-        echo Html::input("text", "address", array('value' => $this->fields['address']));
+        echo Html::input("text", "address", array('value' => $this->fields['address'] ?? '', 'required' => true));
 
         echo "</td></tr>";
 

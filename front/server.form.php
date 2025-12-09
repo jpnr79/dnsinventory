@@ -53,6 +53,7 @@ Html::header(
     PluginDnsinventoryServer::getTypeName(Session::getPluralNumber())
 );
 
-$server->display(array('id' => $_GET["id"]));
+$id = $_GET["id"] ?? 0;
+$server->display(array('id' => $id));
 
 Html::footer();

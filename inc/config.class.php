@@ -58,6 +58,13 @@ class PluginDnsinventoryConfig extends CommonDBTM {
         
         echo Html::link(__("DNS Servers", "dnsinventory"), PluginDnsinventoryServer::getSearchURL(true));
         
+        echo "</td><td>";
+        
+        // Add button to create new DNS server
+        echo "<a href='" . PluginDnsinventoryServer::getFormURL(true) . "' class='btn btn-primary'>";
+        echo "<i class='fas fa-plus'></i> " . __('Add');
+        echo "</a>";
+        
         echo "</td></tr>";
         echo "</table></div>";
         

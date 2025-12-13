@@ -1,0 +1,223 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Class Html referenced with incorrect case\: HTML\.$#'
+			identifier: class.nameCase
+			count: 3
+			path: front/config.form.php
+
+		-
+			message: '#^Class Html referenced with incorrect case\: HTML\.$#'
+			identifier: class.nameCase
+			count: 3
+			path: front/server.form.php
+
+		-
+			message: '#^Access to constant MODE_EXTERNAL on an unknown class CronTask\.$#'
+			identifier: class.notFound
+			count: 1
+			path: hook.php
+
+		-
+			message: '#^Call to static method Register\(\) on an unknown class CronTask\.$#'
+			identifier: class.notFound
+			count: 1
+			path: hook.php
+
+		-
+			message: '#^Instantiated class FQDN not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/cron.class.php
+
+		-
+			message: '#^Instantiated class NetworkName not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/cron.class.php
+
+		-
+			message: '#^Parameter \$task of method PluginDnsinventoryCron\:\:cronDnsinventory\(\) has invalid type CronTask\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/cron.class.php
+
+		-
+			message: '#^Undefined variable\: \$nb$#'
+			identifier: variable.undefined
+			count: 1
+			path: inc/server.class.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$options \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#4 \$request \(Net_DNS2_Packet_Request\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Exception.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#5 \$response \(Net_DNS2_Packet_Response\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Exception.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$packet \(Net_DNS2_Packet\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Header.php
+
+		-
+			message: '#^Access to an undefined property Net_DNS2_PrivateKey\:\:\$_key_format\.$#'
+			identifier: property.notFound
+			count: 1
+			path: lib/netdns2/Net/DNS2/PrivateKey.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$packet \(Net_DNS2_Packet\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Question.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_RR\:\:preBuild\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$packet \(Net_DNS2_Packet\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$rr \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$packet \(Net_DNS2_Packet\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR/CERT.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$rr \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR/CERT.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$packet \(Net_DNS2_Packet\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR/OPT.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$rr \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/RR/OPT.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$options \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Resolver.php
+
+		-
+			message: '#^Undefined variable\: \$errno$#'
+			identifier: variable.undefined
+			count: 1
+			path: lib/netdns2/Net/DNS2/Socket/Streams.php
+
+		-
+			message: '#^Undefined variable\: \$errstr$#'
+			identifier: variable.undefined
+			count: 1
+			path: lib/netdns2/Net/DNS2/Socket/Streams.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$options \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: lib/netdns2/Net/DNS2/Updater.php
+
+		-
+			message: '#^Instantiated class PEAR_PackageFileManager2 not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: lib/netdns2/package.php
+
+		-
+			message: '#^Path in require_once\(\) "PEAR/PackageFileManager/File\.php" is not a file or it does not exist\.$#'
+			identifier: requireOnce.fileNotFound
+			count: 1
+			path: lib/netdns2/package.php
+
+		-
+			message: '#^Path in require_once\(\) "PEAR/PackageFileManager2\.php" is not a file or it does not exist\.$#'
+			identifier: requireOnce.fileNotFound
+			count: 1
+			path: lib/netdns2/package.php
+
+		-
+			message: '#^Call to static method run\(\) on an unknown class PHPUnit_TextUI_TestRunner\.$#'
+			identifier: class.notFound
+			count: 1
+			path: lib/netdns2/tests/AllTests.php
+
+		-
+			message: '#^Instantiated class PHPUnit_Framework_TestSuite not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: lib/netdns2/tests/AllTests.php
+
+		-
+			message: '#^Result of static method Net_DNS2_AllTests\:\:suite\(\) \(void\) is used\.$#'
+			identifier: staticMethod.void
+			count: 1
+			path: lib/netdns2/tests/AllTests.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_DNSSECTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: lib/netdns2/tests/Net_DNS2_DNSSECTest.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_ParserTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: lib/netdns2/tests/Net_DNS2_ParserTest.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_ParserTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: lib/netdns2/tests/Net_DNS2_ParserTest.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_ResolverTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: lib/netdns2/tests/Net_DNS2_ResolverTest.php
+
+		-
+			message: '#^Call to an undefined method Net_DNS2_ResolverTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: lib/netdns2/tests/Net_DNS2_ResolverTest.php
+
+		-
+			message: '#^Array has 2 duplicate keys with value ''config'' \(''config'', ''config''\)\.$#'
+			identifier: array.duplicateKey
+			count: 1
+			path: setup.php

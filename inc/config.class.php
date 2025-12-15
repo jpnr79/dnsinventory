@@ -71,10 +71,11 @@ class PluginDnsinventoryConfig extends CommonDBTM {
         Html::closeForm();
     }
 
-    static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0) {
+    public static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0): bool {
         if ($item->getType() == 'Config') {
             $config = new self();
             $config->showForm(0, []);
         }
+        return true;
     }
 }

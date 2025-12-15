@@ -1,5 +1,5 @@
 <?php
-
+/*if (!defined('GLPI_ROOT')) { define('GLPI_ROOT', realpath(__DIR__ . '/../..')); }
 /*
  * Copyright (C) 2016 Javier Samaniego García <jsamaniegog@gmail.com>
  *

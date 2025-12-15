@@ -125,7 +125,7 @@ class PluginDnsinventoryCron extends CommonDBTM {
             $resultado = $networkname->update(array(
                 'id' => $data['id'],
                 'name' => $hostname,
-                'fqdns_id' => $fqdns->fields['id']
+                'fqdns_id' => $fqdns->fields['id'] ?? ''
             ));
             
             if ($resultado === false) {
@@ -134,7 +134,7 @@ class PluginDnsinventoryCron extends CommonDBTM {
                 $task->log(
                     __("Network name updated. Name:", "dnsinventory") . " $hostname, " 
                     . __("IP address:", "dnsinventory") . " " . $data['ipaddress'] . ", " 
-                    . __("Domain:", "dnsinventory") . " " . $fqdns->fields['fqdn']
+                    . __("Domain:", "dnsinventory") . " " . $fqdns->fields['fqdn'] ?? ''
                 );
             }
         }

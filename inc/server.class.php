@@ -76,12 +76,12 @@ class PluginDnsinventoryServer extends CommonDBTM {
         echo "<input type='hidden' name='id' value='" . ($this->fields['id'] ?? 0) . "'>";
 
         echo __('Name') . "</td><td colspan='2'>";
-        echo "<input type='text' name='name' value='" . htmlspecialchars($this->fields['name'] ?? '', ENT_QUOTES) . "' required='required' class='form-control'>";
+        echo "<input type='text' name='name' value='" . htmlspecialchars(($this->fields['name'] ?? ''), ENT_QUOTES) . "' required='required' class='form-control'>";
 
         echo "</td></tr><tr><td colspan='2'>";
 
         echo __('Address', 'dnsinventory') . "</td><td colspan='2'>";
-        echo "<input type='text' name='address' value='" . htmlspecialchars($this->fields['address'] ?? '', ENT_QUOTES) . "' required='required' class='form-control'>";
+        echo "<input type='text' name='address' value='" . htmlspecialchars(($this->fields['address'] ?? ''), ENT_QUOTES) . "' required='required' class='form-control'>";
 
         echo "</td></tr>";
 

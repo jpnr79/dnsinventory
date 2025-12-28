@@ -61,11 +61,25 @@ function plugin_version_dnsinventory() {
  * @return boolean
  */
 function plugin_dnsinventory_check_prerequisites() {
-    if (version_compare(GLPI_VERSION, '11.0', 'lt')) {
-        Toolbox::logInFile('dnsinventory', sprintf(
+    // GLPI 11+ compatible version check: read from version file
+    $glpi_version = 'unknown';
+    $version_file = dirname(__DIR__, 2) . '/version';
+    if (file_exists($version_file)) {
+        $glpi_version = trim(file_get_contents($version_file));
+    }
+    if (version_compare($glpi_version, '11.0', '<')) {
+        $msg = sprintf(
             'ERROR [%s:%s] GLPI version too low: %s, user=%s',
-            __FILE__, __FUNCTION__, GLPI_VERSION, $_SESSION['glpiname'] ?? 'unknown'
-        ));
+            __FILE__, __FUNCTION__, $glpi_version, $_SESSION['glpiname'] ?? 'unknown'
+        );
+        try {
+            if (class_exists('Toolbox') && method_exists('Toolbox', 'logInFile')) {
+                @Toolbox::logInFile('dnsinventory', $msg);
+            } else {
+                $logfile = __DIR__ . '/dnsinventory_error.log';
+                file_put_contents($logfile, $msg . "\n", FILE_APPEND);
+            }
+        } catch (\Throwable $e) {}
         echo __('This plugin requires GLPI >= 11.0', 'dnsinventory');
         return false;
     }
